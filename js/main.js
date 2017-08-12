@@ -5,8 +5,8 @@ document.addEventListener('DOMContentLoaded', function makePixel() {
     div.classList.add('pixel');
     var canvas = document.getElementById('canvas');
     canvas.appendChild(div);
-    div.addEventListener('mouseover', paint);
     div.addEventListener('click', clickPaint);
+    div.addEventListener('mouseenter', paint);
   }
 })
 
@@ -14,24 +14,27 @@ var palette = document.getElementById('palette');
   palette.addEventListener('click', newColor);
 
 var currentColor = '';
+
 function newColor(event) {
   currentColor = window.getComputedStyle(event.target).backgroundColor;
+
 }
 
+var canvas = document.getElementById('canvas');
 
+function clickPaint() {
+    event.target.style.backgroundColor = currentColor;
+}
 
 var mouseState = false;
-function clickPaint() {
-    event.target.style.backgroundColor = currentColor || 'white';
-}
 function paint() {
   canvas.addEventListener('mousedown', function() {
     mouseState = true;
   });
-  body.addEventListener('mouseup', function() {
+  canvas.addEventListener('mouseup', function() {
     mouseState = false;
   });
   if (mouseState === true) {
-    event.target.style.backgroundColor = currentColor || 'white';
+    event.target.style.backgroundColor = currentColor;
   }
 }

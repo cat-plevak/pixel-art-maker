@@ -1,0 +1,81 @@
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+  margin: 0px;
+}
+
+body {
+  font-family: 'Quicksand', sans-serif;
+}
+
+.container {
+  margin: 0% 8% 8% 8%;
+  display:flex;
+  justify-content: space-between;
+}
+
+h1 {
+  letter-spacing: 0.1em;
+  margin: 8% 0% 0% 8%;
+}
+
+#canvas {
+  border: solid rgba(0, 0, 0, 0.5) 1px;
+  width: 802px;
+  height:600px;
+}
+
+.pixel {
+  border:solid rgba(0, 0, 0, 0.1) 1px;
+  width: 20px;
+  height: 20px;
+  float:left;
+}
+
+.pixel:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+/*STYLE PALETTE*/
+#palette {
+  border: solid rgba(0, 0, 0, 0.5) 1px;
+  height:600px;
+  width:250px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  /*flex-direction: column;*/
+
+}
+
+/*STYLE PALETTE DIVS*/
+.color {
+  width: 30%;
+  height: 10%;
+  border: solid rgba(0, 0, 0, 0.1) 1px;
+}
+
+#red {
+  background-color: red;
+}
+
+#orange {
+  background-color: orange;
+}
+
+#yellow {
+  background-color: yellow;
+}
+
+#green {
+  background-color: green;
+}
+
+#blue {
+  background-color: blue;
+}
+
+#purple {
+  background-color: purple;
+}

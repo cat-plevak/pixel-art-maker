@@ -17,7 +17,6 @@ var currentColor = '';
 
 function newColor(event) {
   currentColor = window.getComputedStyle(event.target).backgroundColor;
-
 }
 
 var canvas = document.getElementById('canvas');
